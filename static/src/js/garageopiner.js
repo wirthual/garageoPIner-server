@@ -22,16 +22,18 @@ var gpio = $("#txtgpio").val();
 var intgpio = parseInt(gpio);
 
 $.get(
-    "http://192.168.2.109:5000/controlRelay/"+gpio);
+    document.location.href + "controlRelay/"+gpio);
 }
+
 
 
 function timeControl(){
 var gpio = $("#txtgpio").val();
 
 $.get(
-    "http://192.168.2.109:5000/timeControl?seconds=10&pin="+gpio);
+    document.location.href + "timeControl?seconds=10&pin="+gpio);
 }
+
 
 function showTimeProperties(show){
     if(show) {            
