@@ -4,7 +4,7 @@ $( document ).ready(function(){
 	$( "#btntime" ).click(timeControl);
 
 	var myswitch = $("#tgltime");
-
+	
 	var timeControlEnabled = myswitch[0].selectedIndex == 1 ? true:false;
 	showTimeProperties(timeControlEnabled);
 
@@ -37,8 +37,10 @@ $.get(
 
 function showTimeProperties(show){
     if(show) {            
-        $('#timefield').fadeIn('slow');
+        $('#timefield').hide(); //Hack. Never show timefield. Until time selection is implemented in js.
+        $( "#btntime" ).fadeIn('slow');
     } else {            
-        $('#timefield').fadeOut();
+        $('#timefield').hide();
+        $( "#btntime" ).hide();
     }
 }
