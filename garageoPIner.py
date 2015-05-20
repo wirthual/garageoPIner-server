@@ -7,6 +7,10 @@ from datetime import timedelta
 
 app = Flask(__name__)
 
+GO_USERNAME = 'admin'
+GO_PASSWORD = 'garageopiner'
+
+
 GPIO.setmode(GPIO.BCM)
 t = None
 app.secret_key = 'secret'
@@ -15,7 +19,7 @@ def check_auth(username, password):
     """This function is called to check if a username /
     password combination is valid.
     """
-    return username == 'admin' and password == 'secret'
+    return username == GO_USERNAME and password == GO_PASSWORD
 
 def authenticate():
     """Sends a 401 response that enables basic auth"""

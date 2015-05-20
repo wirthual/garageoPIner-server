@@ -31,7 +31,7 @@ function timeControl(){
 var gpio = $("#txtgpio").val();
 
 $.get(
-    document.location.href + "timeControl?seconds=10&pin="+gpio);
+    document.location.href + "timeControl?seconds=240&pin="+gpio);
 }
 
 
