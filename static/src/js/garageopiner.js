@@ -42,7 +42,7 @@ function toggleIN1(){
 }
 
 function toggleIN2(){
-	$.get(document.location.href + "toggleIN1");
+	$.get(document.location.href + "toggleIN2");
 }
 
 function timeControlIN1(){
@@ -53,11 +53,11 @@ function timeControlIN2(){
 	$.get(document.location.href + "timeControlIN2?seconds=240");
 }
 
-function timeControlIN1(){
+function stopTimeControlIN1(){
 	$.get(document.location.href + "stopTimeControlIN1");
 }
 
-function timeControlIN2(){
+function stopTimeControlIN2(){
 	$.get(document.location.href + "stopTimeControlIN2");
 }
 
