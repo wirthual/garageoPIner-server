@@ -65,11 +65,11 @@ function stopTimeControlIN2(){
 function showTimeProperties(show){
     if(show) {            
        	timefield.hide(); //Hack. Never show timefield. Until time selection is implemented in js.
-        buttonTime1.fadeIn('slow');
-        buttonTime2.fadeIn('slow');
+        buttonTime1.fadeIn('slow').next().fadeIn('slow');
+        buttonTime2.fadeIn('slow').next().fadeIn('slow');
     } else {            
         timefield.hide();
-        buttonTime1.hide();
-        buttonTime2.hide();
+        buttonTime1.hide().next().hide();
+        buttonTime2.hide().next().hide();;
     }
 }
