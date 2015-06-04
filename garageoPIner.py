@@ -5,6 +5,7 @@ import RPi.GPIO as GPIO
 import time
 from datetime import timedelta
 import configparser
+from twisted.protocols.ftp import FileNotFoundError
 
 app = Flask(__name__)
 app.secret_key = 'm4bG3YJwarQQXU3T' #Needed for keep session open
@@ -129,16 +130,19 @@ def togglePin(pin):
 
 
 if __name__ == '__main__':
+    files = ['garageoPIner.config']
     config = configparser.RawConfigParser()
-    config.read('garageoPIner.cfg')
-
-    GO_PORT = int(config.get("Settings","port"))
-    GO_PIN1 = int(config.get("Settings","pin1"))
-    GO_PIN2 = int(config.get("Settings","pin2"))
-
-    GO_USERNAME = config.get("Credentials","username")
-    GO_PASSWORD = config.get("Credentials","password")
-
+    dataset = config.read('garageoPIner.config')
+    if len(dataset) == len(files):
+        GO_PORT = int(config.get("Settings","port"))
+        GO_PIN1 = int(config.get("Settings","pin1"))
+        GO_PIN2 = int(config.get("Settings","pin2"))
+    
+        GO_USERNAME = config.get("Credentials","username")
+        GO_PASSWORD = config.get("Credentials","password")
+    else:
+        raise FileNotFoundError, "Failed to open/find configuration file"
+   
 
     GPIO.setup(GO_PIN1,GPIO.IN)
     GPIO.setup(GO_PIN2,GPIO.IN)

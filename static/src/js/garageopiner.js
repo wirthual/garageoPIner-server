@@ -70,6 +70,6 @@ function showTimeProperties(show){
     } else {            
         timefield.hide();
         buttonTime1.hide();
-        buttonTime2.fadeIn('slow');
+        buttonTime2.hide();
     }
 }
