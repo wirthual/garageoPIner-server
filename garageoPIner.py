@@ -141,7 +141,7 @@ if __name__ == '__main__':
         GO_USERNAME = config.get("Credentials","username")
         GO_PASSWORD = config.get("Credentials","password")
     else:
-        raise FileNotFoundError("Failed to open/find configuration file")
+        raise ValueError("Failed to open/find configuration file")
    
 
     GPIO.setup(GO_PIN1,GPIO.IN)
