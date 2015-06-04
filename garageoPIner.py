@@ -5,7 +5,6 @@ import RPi.GPIO as GPIO
 import time
 from datetime import timedelta
 import configparser
-from twisted.protocols.ftp import FileNotFoundError
 
 app = Flask(__name__)
 app.secret_key = 'm4bG3YJwarQQXU3T' #Needed for keep session open
