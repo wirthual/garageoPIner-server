@@ -7,7 +7,7 @@ from datetime import timedelta
 import configparser
 
 app = Flask(__name__)
-app.secret_key = 'm4bG3YJwarQQXU3T' #Needed for keep session open
+app.secret_key = 'm4bG3YJwarQQXU3F' #Needed for keep session open
 
 GO_USERNAME = 'admin'
 GO_PASSWORD = 'garageopiner'
