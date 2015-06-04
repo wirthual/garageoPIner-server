@@ -1,46 +1,75 @@
+
+
+
 $( document ).ready(function(){
+	initialize();
+});
 
-	$( "#btnopenclose" ).click(toggleRelais);
-	$( "#btntime" ).click(timeControl);
-
-	var myswitch = $("#tgltime");
+function initialize(){
+	//Initialize global vaiables
+	button1 = $( "#btnopenclose1" );
+	buttonTime1 = $( "#btntime1" );
 	
+	button2 = $( "#btnopenclose2" );
+	buttonTime2 = $( "#btntime2" );
+	
+	myswitch = $("#tgltime");
+	
+	timefield = $('#timefield');
+	
+	toggleTime = $('#tgltime');
+
 	var timeControlEnabled = myswitch[0].selectedIndex == 1 ? true:false;
 	showTimeProperties(timeControlEnabled);
 
-
-	$('#tgltime').change(function(event) {
+	toggleTime.change(function(event) {
 	    event.stopPropagation();
 	    var timeControlEnabled= myswitch[0].selectedIndex == 1 ? true:false;
 	    showTimeProperties(timeControlEnabled);
 	});
+	
+	button1.click(toggleIN1);
+	buttonTime1.click(timeControlIN1);
 
-});
+	button2.click(toggleIN2);
+	buttonTime2.click(timeControlIN2);
+	
 
-function toggleRelais(){
-var gpio = $("#txtgpio").val();
-var intgpio = parseInt(gpio);
-
-$.get(
-    document.location.href + "controlRelay/"+gpio);
 }
 
+function toggleIN1(){
+	$.get(document.location.href + "toggleIN1");
+}
 
+function toggleIN2(){
+	$.get(document.location.href + "toggleIN1");
+}
 
-function timeControl(){
-var gpio = $("#txtgpio").val();
+function timeControlIN1(){
+	$.get(document.location.href + "timeControlIN1?seconds=240");
+}
 
-$.get(
-    document.location.href + "timeControl?seconds=240&pin="+gpio);
+function timeControlIN2(){
+	$.get(document.location.href + "timeControlIN2?seconds=240");
+}
+
+function timeControlIN1(){
+	$.get(document.location.href + "stopTimeControlIN1");
+}
+
+function timeControlIN2(){
+	$.get(document.location.href + "stopTimeControlIN2");
 }
 
 
 function showTimeProperties(show){
     if(show) {            
-        $('#timefield').hide(); //Hack. Never show timefield. Until time selection is implemented in js.
-        $( "#btntime" ).fadeIn('slow');
+       	timefield.hide(); //Hack. Never show timefield. Until time selection is implemented in js.
+        buttonTime1.fadeIn('slow');
+        buttonTime2.fadeIn('slow');
     } else {            
-        $('#timefield').hide();
-        $( "#btntime" ).hide();
+        timefield.hide();
+        buttonTime1.hide();
+        buttonTime2.fadeIn('slow');
     }
 }

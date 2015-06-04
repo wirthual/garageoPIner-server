@@ -22,8 +22,12 @@
                 data-iconpos="right" data-mini="true">Settings</a>
             </div>
             <div data-role="content">
-                <a data-role="button" id="btnopenclose">Open / Close</a>
-                <a data-role="button" id="btntime">Time Control</a>
+            <label>Tor 1</label>
+                <a data-role="button" id="btnopenclose1">Open /Close</a>
+                <a data-role="button" id="btntime1">Time Control</a>
+                <label>Tor 2</label>
+                <a data-role="button" id="btnopenclose2">Open / Close</a>
+                <a data-role="button" id="btntime2">Time Control</a>
             </div>
         </div>
         <div data-role="page" id="page2" data-title="Settings">
@@ -33,15 +37,14 @@
             </div>
             <div data-role="content">
              <h3 id="txtconnection">Verbindungseinstellungen</h3>
-                <div class="div-widget">
-                    <div data-role="fieldcontain">
-                        <label for="txtgpio">GPIO Pin:</label>
-                        <input type="text" id="txtgpio" value="4" />
-                    </div>
-                </div>
                 <h3>Garageneinstellungen</h3>
                 <div class="div-widget">
                     <label>Zeitschaltung</label>
+                    <select data-role="slider" id="tgltime" data-mini="true">
+                        <option value="off">Off</option>
+                        <option value="on">On</option>
+                    </select>
+                    <label>2. Tor</label>
                     <select data-role="slider" id="tgltime" data-mini="true">
                         <option value="off">Off</option>
                         <option value="on">On</option>
