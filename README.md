@@ -35,7 +35,7 @@ cd garageoPIner-server-master/
 ```
 
 ######Change the config
-garageoPIner.config for your needs:
+Edit garageoPIner.config for your needs:
 ```bash
 [Settings]
 port = 80 # port garageoPIner is running on
