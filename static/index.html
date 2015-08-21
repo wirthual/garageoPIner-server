@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="static/lib/jquery-1.6.4.js"></script>
         <script src="static/lib/jquery.mobile-1.1.0.js"></script>
-		<script type="text/javascript" src="static/src/js/webiopi.js"></script>
 	<script type="text/javascript" src="static/src/js/garageopiner.js"></script>
 	
 
@@ -24,10 +23,10 @@
             <div data-role="content">
             <label>Tor 1</label>
                 <a data-role="button" id="btnopenclose1">Open /Close</a>
-                <a data-role="button" id="btntime1">Time Control</a>
+                <a data-role="button" id="btntime1">Time Control 4 Minutes</a>
                 <label>Tor 2</label>
                 <a data-role="button" id="btnopenclose2">Open / Close</a>
-                <a data-role="button" id="btntime2">Time Control</a>
+                <a data-role="button" id="btntime2">Time Control 4 Minutes</a>
             </div>
         </div>
         <div data-role="page" id="page2" data-title="Settings">
@@ -36,30 +35,16 @@
                 <a data-role="button" id="btnback" href="#page1" data-rel="page" data-mini="true">Zurück</a>
             </div>
             <div data-role="content">
-             <h3 id="txtconnection">Verbindungseinstellungen</h3>
-                <h3>Garageneinstellungen</h3>
+                <h3>Settings</h3>
                 <div class="div-widget">
-                    <label>Zeitschaltung</label>
+                    <label>Time Control</label>
                     <select data-role="slider" id="tgltime" data-mini="true">
                         <option value="off">Off</option>
                         <option value="on">On</option>
                     </select>
-                    <fieldset data-role="controlgroup" id="timefield">
-                        <legend></legend>
-                        <input type="radio" id="radio1" name="radio1" value="1" checked="checked"
-                        />
-                        <label for="radio1">1 Minute</label>
-                        <input type="radio" id="rdgroup" name="radio1" />
-                        <label for="rdgroup">2 Minuten</label>
-                        <input type="radio" id="radio3" name="radio1" />
-                        <label for="radio3">5 Minuten</label>
-                        <input type="radio" id="radio4" name="radio1" />
-                        <label for="radio4">10 Minuten</label>
-                    </fieldset>
                 </div>
             </div>
         </div>
     </body>
 
 </html>
-
