@@ -31,7 +31,7 @@ unzip twoGarageDoors.zip
 
 ######Switch to the unziped folder where you find the file: garageoPIner.py
 ```bash
-cd garageoPIner-server-master/
+cd garageoPIner-server-twoGarageDoors/
 ```
 
 ######Change the config
