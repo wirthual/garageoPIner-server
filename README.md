@@ -20,21 +20,21 @@ sudo pip install rpi.gpio Flask configparser
 
 How to run the server side
 ----------------------------------------
-######Download this project.
+###### Download this project.
 ```bash
 wget https://github.com/wirthual/garageoPIner-server/archive/twoGarageDoors.zip
 ```
-######Unzip downloaded folder:
+###### Unzip downloaded folder:
 ```bash
 unzip twoGarageDoors.zip
 ```
 
-######Switch to the unziped folder where you find the file: garageoPIner.py
+###### Switch to the unziped folder where you find the file: garageoPIner.py
 ```bash
 cd garageoPIner-server-twoGarageDoors/
 ```
 
-######Change the config
+###### Change the config
 Edit garageoPIner.config for your needs:
 ```bash
 [Settings]
@@ -47,7 +47,7 @@ username = admin # username for authentication on webpage and app
 password = garageopiner # password for authentication on webpage and app
 ```
 
-######Run the application
+###### Run the application
 ```bash
 python garageoPIner.py &
 ```
